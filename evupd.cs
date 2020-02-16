@@ -4,13 +4,13 @@ using System.Diagnostics;
 using System.Windows.Forms;
 
 using System.Reflection;
-[assembly: AssemblyTitle("Everything background database updàter")]
+[assembly: AssemblyTitle("Everything database background updàter")]
 [assembly: AssemblyProduct("EvUpd")]
 [assembly: AssemblyCompany("prog4food")]
 [assembly: AssemblyDescription("github.com/prog4food")]
 [assembly: AssemblyCopyright("prog4food (c) 2o2o")]
 
-[assembly: AssemblyFileVersion("0.4.1")]
+[assembly: AssemblyFileVersion("0.4.2")]
 
 // prog4food Everything Updater
 namespace prog4food {
@@ -32,6 +32,11 @@ namespace prog4food {
                 evproc.WaitForExit();
 
                 // Run 2
+                evproc.StartInfo.Arguments = "-exit";
+                evproc.Start();
+                evproc.WaitForExit();
+
+                // Run 3
                 evproc.StartInfo.Arguments = string.Format("-read-only -db \"{0}Everything.db\" -startup", vAppDir);
                 evproc.Start();
             }
