@@ -25,7 +25,6 @@ namespace prog4food {
                 // Run 2
                 evproc.StartInfo.Arguments = string.Format("-read-only -db \"{0}Everything.db\" -startup", vAppDir);
                 evproc.Start();
-                MessageBox.Show("exit");
             }
             catch (Exception err) {
                 MessageBox.Show(err.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
