@@ -3,7 +3,16 @@ using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-// prog4food Everything Updater v0.3
+using System.Reflection;
+[assembly: AssemblyTitle("Everything background database updàter")]
+[assembly: AssemblyProduct("EvUpd")]
+[assembly: AssemblyCompany("prog4food")]
+[assembly: AssemblyDescription("github.com/prog4food")]
+[assembly: AssemblyCopyright("prog4food (c) 2o2o")]
+
+[assembly: AssemblyFileVersion("0.4.1")]
+
+// prog4food Everything Updater
 namespace prog4food {
     class Program {
 
